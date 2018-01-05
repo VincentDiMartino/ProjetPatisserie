@@ -51,7 +51,7 @@
                     <td>'.$product['productType'].'</td>
                     <td>'.$product['price'].'</td>
                     <td>'.$product['craftsmen'].'</td>
-                    <td>'.$product['price'].'</td>
+                    <td>'.$product['ville'].'</td>
                     </tr>';
               }
             ?>
