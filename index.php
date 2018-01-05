@@ -80,6 +80,11 @@
   <!-- <script type="text/javascript" src="view/js/bootstrap.min.js"></script> -->
   <script type="text/javascript" src="view/js/stupidtable.min.js"></script>
   <script type="text/javascript" src="view/js/app.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#productsTable").stupidtable();
+    });
+  </script>
 
 
 </body>
