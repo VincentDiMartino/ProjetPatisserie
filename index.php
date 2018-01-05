@@ -7,16 +7,17 @@
 ?>
 <head>
   <meta charset="utf-8">
-  <title>BOULANGERIE PATISSERIE DES PETITS GATEAUX A TOUT MOMENT DE LA JOURNEE</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/table.css">
-  <link rel="stylesheet" href="css/search.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="icon" type="image/svg" href="img/patisserie_logo.svg" />
+  <title>Boulangerie Patisserie, des petits gâteaux à tout moment de la journée</title>
+  <link rel="stylesheet" href="view/css/style.css">
+  <link rel="stylesheet" href="view/css/table.css">
+  <link rel="stylesheet" href="view/css/search.css">
+  <link rel="stylesheet" href="view/css/bootstrap.min.css">
+  <link rel="stylesheet" href="view/css/fontawesome-all.css">
+  <link rel="icon" type="image/svg" href="view/img/patisserie_logo.svg" />
 </head>
 <body>
   <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1"><img src="img/patisserie_logo.svg" class="logo"></span>
+    <a href="#"><span class="navbar-brand mb-0 h1"><img src="view/img/patisserie_logo.svg" class="logo"></span></a>
   </nav>
 
   <div class="container-fluid">
@@ -27,44 +28,44 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Filtrer recherche" aria-label="Filtrer recherche" aria-describedby="basic-addon2">
         </div>
 
+
         <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Produit</th>
-              <th scope="col">Prix</th>
-              <th scope="col">Artisan</th>
-              <th scope="col">Ville</th>
+              <th scope="col" data-sort="string">Produit <i class="fa fa-sort" aria-hidden="true"></i></th>
+              <th scope="col" data-sort="float">Prix <i class="fa fa-sort" aria-hidden="true"></i></th>
+              <th scope="col" data-sort="string">Artisan <i class="fa fa-sort" aria-hidden="true"></i></th>
+              <th scope="col" data-sort="string">Ville <i class="fa fa-sort" aria-hidden="true"></i></th>
             </tr>
           </thead>
           <tbody id="productsTable">
+            <?php
 
-              <?php
+              $products = getProduct();
 
-                $products = getProduct();
+              foreach($products as $product){
 
-                foreach($products as $product){
-
-                    echo' <tr>
-                      <th scope="row">1</th>
-                      <td>'.$product['id'].'</td>
-                      <td>'.$product['id_type'].'</td>
-                      <td>'.$product['craftsmen'].'</td>
-                      <td>'.$product['price'].'</td>';
-                }
-              ?>
-            </tr>
+                  echo' <tr>
+                    <th scope="row">1</th>
+                    <td>'.$product['id'].'</td>
+                    <td>'.$product['id_type'].'</td>
+                    <td>'.$product['craftsmen'].'</td>
+                    <td>'.$product['price'].'</td>
+                    </tr>';
+              }
+            ?>
             <tr>
               <th scope="row">2</th>
               <td>Jacob</td>
-              <td>Thornton</td>
+              <td>2</td>
               <td>@fat</td>
               <td>@mdo</td>
             </tr>
             <tr>
               <th scope="row">3</th>
               <td>Larry</td>
-              <td>the Bird</td>
+              <td>1</td>
               <td>@twitter</td>
               <td>@mdo</td>
             </tr>
@@ -75,11 +76,11 @@
 
   </div>
 
+  <script type="text/javascript" src="view/js/jquery-3.2.1.min.js"></script>
+  <!-- <script type="text/javascript" src="view/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="view/js/stupidtable.min.js"></script>
+  <script type="text/javascript" src="view/js/app.js"></script>
 
-
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
 
 </body>
 </html>
