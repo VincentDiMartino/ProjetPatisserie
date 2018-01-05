@@ -21,15 +21,16 @@
     <a href="#"><span class="navbar-brand mb-0 h1"><img src="view/img/patisserie_logo.svg" class="logo"></span></a>
   </nav>
 
+
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
-
+      <div class="col-md-6">
         <div class="input-group mb-3 search">
           <input type="text" id="searchInput" class="form-control" placeholder="Filtrer recherche" aria-label="Filtrer recherche" aria-describedby="basic-addon2">
         </div>
-
-        <div class="input-group mb-3">
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3 search">
           <div class="input-group-prepend">
             <button class="btn btn-outline-secondary" type="button">Soumettre</button>
           </div>
@@ -40,6 +41,14 @@
             <option value="3">Three</option>
           </select>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
 
         <table class="table" id="productsTable">
           <thead class="thead-dark">
@@ -53,7 +62,6 @@
           </thead>
           <tbody id="productsTableContent">
             <?php
-
               $products = getProduct();
               $rowNumber = 0;
               foreach($products as $product){

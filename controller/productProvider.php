@@ -6,21 +6,19 @@
 
   function getProduct(){
 
-
-
   $products = getAllProduct();
 
   $productsWithDetails = getDeatils($products);
 
   return $productsWithDetails;
 
-}
+  }
 
 function getPriceMin ($idProductType) {
 
   $products = getPriceMinByProductTypeId($idProductType);
 
-  $productsWithDetails = getDeatils($products);
+  $productsWithDetails = getDetails($products);
 
   return $productsWithDetails;
 
@@ -38,10 +36,9 @@ function getPriceMax ($idProductType) {
   return $products;
 }
 
-function getDeatils($products){
+function getDetails($products){
 
   foreach($products as $key => $product){
-
       $artisan = getArtisanById($product['id_craftsmen']);
       $products[$key]['craftsmen'] = $artisan['name'];
       $productType = getProductTypeById($product['id_type']);
