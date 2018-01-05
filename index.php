@@ -43,10 +43,16 @@
             <?php
 
               $products = getProduct();
-
+              $rowNumber = 0;
               foreach($products as $product){
+<<<<<<< HEAD
+=======
+
+                $rowNumber++;
+
+>>>>>>> feature/feature-vincent
                   echo' <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">'.$rowNumber.'</th>
                     <td>'.$product['productType'].'</td>
                     <td>'.$product['price'].'</td>
                     <td>'.$product['craftsmen'].'</td>
