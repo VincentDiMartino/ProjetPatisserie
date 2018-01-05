@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php
+
+  include('../controller/productProvider.php');
+
+?>
 <head>
   <meta charset="utf-8">
   <title>BOULANGERIE PATISSERIE DES PETITS GATEAUX A TOUT MOMENT DE LA JOURNEE</title>
@@ -9,14 +14,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="icon" type="image/svg" href="img/patisserie_logo.svg" />
 </head>
-</html>
-<?php
-
-  include('../model/productRepository.php');
-
-  $products = getAllProduct();
-?>
-<html>
 <body>
   <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1"><img src="img/patisserie_logo.svg" class="logo"></span>
@@ -41,12 +38,21 @@
             </tr>
           </thead>
           <tbody id="productsTable">
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
+
+              <?php
+
+                $products = getProduct();
+
+                foreach($products as $product){
+
+                    echo' <tr>
+                      <th scope="row">1</th>
+                      <td>'.$product['id'].'</td>
+                      <td>'.$product['id_type'].'</td>
+                      <td>'.$product['artisan'].'</td>
+                      <td>'.$product['prix'].'</td>';
+                }
+              ?>
             </tr>
             <tr>
               <th scope="row">2</th>
