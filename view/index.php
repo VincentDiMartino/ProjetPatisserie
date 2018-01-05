@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="icon" type="image/svg" href="img/patisserie_logo.svg" />
 </head>
+</html>
+<?php
+
+  include('../model/productRepository.php');
+
+  $products = getAllProduct();
+?>
+<html>
 <body>
   <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1"><img src="img/patisserie_logo.svg" class="logo"></span>
