@@ -36,7 +36,7 @@ function getPriceMax ($idProductType) {
   return $products;
 }
 
-function getType(){
+function getTypeAll(){
 
 $products = getAllProductType();
 
