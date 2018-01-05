@@ -13,7 +13,8 @@ function getAllProduct (){
       die('Erreur : ' . $e->getMessage());
   }
     $response = $bdd->query('SELECT * FROM product');
-    return $response;
+
+    return $response->fetchAll();
 }
 
 ?>

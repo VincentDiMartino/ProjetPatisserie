@@ -1,22 +1,22 @@
 
 <?php
 
+  try{
 
-function getArtisantById ($id){
+     $bdd = new PDO('mysql:host=localhost;dbname=projetpatisserie;charset=utf8', 'root', '');
 
-    try{
+  }
+  catch (Exception $e){
 
-      $bdd = new PDO('mysql:host=localhost;dbname=projetpatisserie;charset=utf8', 'root', '');
+    die('Erreur : ' . $e->getMessage());
+  }
 
-    }
-    catch (Exception $e){
+function getArtisanById ($id){
 
-      die('Erreur : ' . $e->getMessage());
-    }
+    global $bdd;
+    $response = $bdd->query('SELECT name FROM craftsmen WHERE id ='.$id);
 
-    $response = $bdd->query('SELECT nom FROM artisant WHERE id ='.$id);
-
-    return $response;
+    return $response->fetch();
 
 }
 
