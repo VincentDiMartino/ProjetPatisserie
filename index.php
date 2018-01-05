@@ -33,7 +33,7 @@
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col" data-sort="string">Produit <i class="fa fa-sort" aria-hidden="true"></i></th>
+              <th scope="col" data-sort="string" data-sort-onload=yes>Produit <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="float">Prix <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="string">Artisan <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="string">Ville <i class="fa fa-sort" aria-hidden="true"></i></th>
