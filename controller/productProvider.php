@@ -1,7 +1,7 @@
 <?php
 
-  include('../model/productRepository.php');
-  include('../model/artisanRepository.php');
+  include('model/productRepository.php');
+  include('model/artisanRepository.php');
 
   function getProduct(){
 
