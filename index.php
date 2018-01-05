@@ -50,8 +50,8 @@
                     <th scope="row">1</th>
                     <td>'.$product['id'].'</td>
                     <td>'.$product['id_type'].'</td>
-                    <td>'.$product['artisan'].'</td>
-                    <td>'.$product['prix'].'</td>
+                    <td>'.$product['craftsmen'].'</td>
+                    <td>'.$product['price'].'</td>
                     </tr>';
               }
             ?>
