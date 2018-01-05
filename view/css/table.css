@@ -1,6 +1,6 @@
 table {
   margin-top: 40px;
 }
-th[data-sort] > i {
+th[data-sort] {
   cursor:pointer;
 }

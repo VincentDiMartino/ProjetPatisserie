@@ -16,6 +16,7 @@
   <link rel="icon" type="image/svg" href="view/img/patisserie_logo.svg" />
 </head>
 <body>
+
   <nav class="navbar navbar-light bg-light">
     <a href="#"><span class="navbar-brand mb-0 h1"><img src="view/img/patisserie_logo.svg" class="logo"></span></a>
   </nav>
@@ -28,8 +29,7 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Filtrer recherche" aria-label="Filtrer recherche" aria-describedby="basic-addon2">
         </div>
 
-
-        <table class="table">
+        <table class="table" id="productsTable">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -39,13 +39,12 @@
               <th scope="col" data-sort="string">Ville <i class="fa fa-sort" aria-hidden="true"></i></th>
             </tr>
           </thead>
-          <tbody id="productsTable">
+          <tbody id="productsTableContent">
             <?php
 
               $products = getProduct();
 
               foreach($products as $product){
-
                   echo' <tr>
                     <th scope="row">1</th>
                     <td>'.$product['productType'].'</td>
@@ -55,36 +54,19 @@
                     </tr>';
               }
             ?>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>2</td>
-              <td>@fat</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>1</td>
-              <td>@twitter</td>
-              <td>@mdo</td>
-            </tr>
           </tbody>
         </table>
+
       </div>
     </div>
-
   </div>
 
   <script type="text/javascript" src="view/js/jquery-3.2.1.min.js"></script>
-  <!-- <script type="text/javascript" src="view/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="view/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="view/js/stupidtable.min.js"></script>
+  <script type="text/javascript" src="view/js/stupidtable.js"></script>
   <script type="text/javascript" src="view/js/app.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("#productsTable").stupidtable();
-    });
-  </script>
+
 
 
 </body>
