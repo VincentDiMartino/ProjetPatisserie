@@ -48,8 +48,8 @@
 
                   echo' <tr>
                     <th scope="row">1</th>
-                    <td>'.$product['id'].'</td>
-                    <td>'.$product['id_type'].'</td>
+                    <td>'.$product['productType'].'</td>
+                    <td>'.$product['price'].'</td>
                     <td>'.$product['craftsmen'].'</td>
                     <td>'.$product['price'].'</td>
                     </tr>';
