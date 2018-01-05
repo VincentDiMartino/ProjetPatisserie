@@ -43,11 +43,13 @@
             <?php
 
               $products = getProduct();
-
+              $rowNumber = 0;
               foreach($products as $product){
 
+                $rowNumber++;
+
                   echo' <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">'.$rowNumber.'</th>
                     <td>'.$product['productType'].'</td>
                     <td>'.$product['price'].'</td>
                     <td>'.$product['craftsmen'].'</td>
@@ -55,20 +57,6 @@
                     </tr>';
               }
             ?>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>2</td>
-              <td>@fat</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>1</td>
-              <td>@twitter</td>
-              <td>@mdo</td>
-            </tr>
           </tbody>
         </table>
       </div>

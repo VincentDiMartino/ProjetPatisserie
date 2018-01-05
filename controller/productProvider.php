@@ -24,5 +24,12 @@
 
   return $products;
 
+}
+
+  function getPriceMin ($idProductType) {
+
+    
+
   }
+
 ?>
