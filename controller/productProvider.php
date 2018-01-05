@@ -11,8 +11,9 @@
 
   foreach($products as $key => $product){
 
-      $artisan = getArtisanById($product['id_type']);
+      $artisan = getArtisanById($product['id_craftsmen']);
       $products[$key]['craftsmen'] = $artisan['name'];
+
 
   }
 

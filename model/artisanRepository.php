@@ -15,7 +15,7 @@ function getArtisanById ($id){
 
     global $bdd;
     $response = $bdd->query('SELECT name FROM craftsmen WHERE id ='.$id);
-
+    
     return $response->fetch();
 
 }
