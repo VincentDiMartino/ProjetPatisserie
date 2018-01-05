@@ -16,6 +16,8 @@
       $products[$key]['craftsmen'] = $artisan['name'];
       $productType = getProductTypeById($product['id_type']);
       $products[$key]['productType'] = $productType['name'];
+      $ville = getArtisanVille($product['id_craftsmen']);
+      $products[$key]['ville'] = $ville['name'];
 
 
   }
