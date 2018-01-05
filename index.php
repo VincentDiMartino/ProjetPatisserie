@@ -36,9 +36,17 @@
           </div>
           <select class="custom-select" id="inputGroupSelect03">
             <option selected>Sélectionnez un article pour voir les prix les moins cher</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <?php
+
+              $productTypes = getTypeAll();
+              $rowNumber = 1;
+              foreach($productTypes as $productType){
+
+                $rowNumber ++;
+                  echo'<option onClick="functionViteFait('.$productType['id'].')" value='.$rowNumber.'>'.$productType['name'].'</option>';
+
+              }
+            ?>
           </select>
         </div>
       </div>
@@ -87,6 +95,7 @@
   <script type="text/javascript" src="view/js/stupidtable.min.js"></script>
   <script type="text/javascript" src="view/js/stupidtable.js"></script>
   <script type="text/javascript" src="view/js/app.js"></script>
+  
 
 
 

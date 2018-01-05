@@ -13,6 +13,9 @@
 
 function getAllProductType (){
 
+
+    global $bdd;
+
     $response = $bdd->query('SELECT * FROM product_type');
 
     return $response->fetchAll();
