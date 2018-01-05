@@ -20,4 +20,32 @@ function getProductTypeById ($id){
 
 }
 
+
+function getPriceMinByProductTypeId ($id){
+
+    global $bdd;
+
+    $prixMin = $bdd->query('SELECT MIN(price) FROM product WHERE id_type = '.$id);
+
+    $prixMin = $prixMin->fetch();
+
+    $response = $bdd->query('SELECT * FROM product WHERE id_type = '.$id.' And price = '.$prixMin['MIN(price)']);
+
+    return $response->fetchAll();
+
+}
+
+function getPriceMaxByProductTypeId ($id){
+
+    global $bdd;
+
+    $prixMin = $bdd->query('SELECT Max(price) FROM product WHERE id_type = '.$id);
+
+    $prixMin = $prixMin->fetch();
+
+    $response = $bdd->query('SELECT * FROM product WHERE id_type = '.$id.' And price = '.$prixMin['MIN(price)']);
+
+    return $response->fetchAll();
+
+}
 ?>
