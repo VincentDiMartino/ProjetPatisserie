@@ -6,15 +6,13 @@
 
   function getProduct(){
 
-
-
   $products = getAllProduct();
 
-  $productsWithDetails = getDeatils($products);
+  $productsWithDetails = getDetails($products);
 
   return $productsWithDetails;
 
-}
+  }
 
 function getPriceMin ($idProductType) {
 
@@ -31,14 +29,22 @@ function getPriceMax ($idProductType) {
 
   $products = getPriceMaxByProductTypeId($idProductType);
 
-  $productsWithDetails = getDeatils($products);
+  $productsWithDetails = getDetails($products);
 
   return $productsWithDetails;
 
   return $products;
 }
 
-function getDeatils($products){
+function getType(){
+
+$products = getAllProductType();
+
+return $products;
+
+}
+
+function getDetails($products){
 
   foreach($products as $key => $product){
 
