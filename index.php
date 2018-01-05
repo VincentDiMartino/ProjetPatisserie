@@ -29,11 +29,23 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Filtrer recherche" aria-label="Filtrer recherche" aria-describedby="basic-addon2">
         </div>
 
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Soumettre</button>
+          </div>
+          <select class="custom-select" id="inputGroupSelect03">
+            <option selected>Sélectionnez un article pour voir les prix les moins cher</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
         <table class="table" id="productsTable">
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
-              <th scope="col" data-sort="string" data-sort-onload=yes>Produit <i class="fa fa-sort" aria-hidden="true"></i></th>
+              <th scope="col" data-sort="string">Produit <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="float">Prix <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="string">Artisan <i class="fa fa-sort" aria-hidden="true"></i></th>
               <th scope="col" data-sort="string">Ville <i class="fa fa-sort" aria-hidden="true"></i></th>
@@ -45,12 +57,7 @@
               $products = getProduct();
               $rowNumber = 0;
               foreach($products as $product){
-<<<<<<< HEAD
-=======
-
-                $rowNumber++;
-
->>>>>>> feature/feature-vincent
+                $rowNumber ++;
                   echo' <tr>
                     <th scope="row">'.$rowNumber.'</th>
                     <td>'.$product['productType'].'</td>
