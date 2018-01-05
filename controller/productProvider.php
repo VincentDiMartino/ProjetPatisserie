@@ -8,7 +8,7 @@
 
   $products = getAllProduct();
 
-  $productsWithDetails = getDeatils($products);
+  $productsWithDetails = getDetails($products);
 
   return $productsWithDetails;
 
@@ -29,11 +29,19 @@ function getPriceMax ($idProductType) {
 
   $products = getPriceMaxByProductTypeId($idProductType);
 
-  $productsWithDetails = getDeatils($products);
+  $productsWithDetails = getDetails($products);
 
   return $productsWithDetails;
 
   return $products;
+}
+
+function getType(){
+
+$products = getAllProductType();
+
+return $products;
+
 }
 
 function getDetails($products){
