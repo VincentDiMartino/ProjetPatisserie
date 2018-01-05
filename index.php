@@ -1,10 +1,10 @@
+<!DOCTYPE html>
+<html>
 <?php
 
   include('controller/productProvider.php');
 
 ?>
-<!DOCTYPE html>
-<html>
 <head>
   <meta charset="utf-8">
   <title>Boulangerie Patisserie, des petits gâteaux à tout moment de la journée</title>
@@ -28,11 +28,6 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Filtrer recherche" aria-label="Filtrer recherche" aria-describedby="basic-addon2">
         </div>
 
-        <?php
-
-          $products = getPriceMin(4);
-
-        ?>
 
         <table class="table">
           <thead class="thead-dark">
@@ -50,8 +45,10 @@
               $products = getProduct();
               $rowNumber = 0;
               foreach($products as $product){
+
                 $rowNumber++;
-                    echo' <tr>
+
+                  echo' <tr>
                     <th scope="row">'.$rowNumber.'</th>
                     <td>'.$product['productType'].'</td>
                     <td>'.$product['price'].'</td>
