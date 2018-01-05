@@ -10,6 +10,36 @@
 
   $products = getAllProduct();
 
+  $productsWithDetails = getDeatils($products);
+
+  return $productsWithDetails;
+
+}
+
+function getPriceMin ($idProductType) {
+
+  $products = getPriceMinByProductTypeId($idProductType);
+
+  $productsWithDetails = getDeatils($products);
+
+  return $productsWithDetails;
+
+  return $products;
+}
+
+function getPriceMax ($idProductType) {
+
+  $products = getPriceMaxByProductTypeId($idProductType);
+
+  $productsWithDetails = getDeatils($products);
+
+  return $productsWithDetails;
+
+  return $products;
+}
+
+function getDeatils($products){
+
   foreach($products as $key => $product){
 
       $artisan = getArtisanById($product['id_craftsmen']);
@@ -18,18 +48,8 @@
       $products[$key]['productType'] = $productType['name'];
       $ville = getArtisanVille($product['id_craftsmen']);
       $products[$key]['ville'] = $ville['name'];
-
-
   }
 
   return $products;
-
 }
-
-  function getPriceMin ($idProductType) {
-
-    
-
-  }
-
 ?>
